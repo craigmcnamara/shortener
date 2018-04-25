@@ -14,7 +14,7 @@ The majority of the Shortener consists of three parts:
 
 === Dependencies
 
-Shortener is designed to work from within a Rails 3 and Rails 4 applications. It has dependancies Rails core components like ActiveRecord, ActionController, the rails routing engine and more.
+Shortener is designed to work from within a Rails 4 and Rails 5.2+ applications. It has dependancies Rails core components like ActiveRecord, ActionController, the rails routing engine and more.
 
 === Ruby Version Support
 
@@ -74,7 +74,7 @@ v0.7.0 drops support for Rails 3.x and supports Rails 4.2 to 5.2+
 
 == Installation
 
-Shortener is compatible with Rails v3 and v4. To install, add to your Gemfile:
+Shortener is compatible with Rails v4 and v5+. To install, add to your Gemfile:
 
   gem 'shortener'
 
