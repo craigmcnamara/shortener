@@ -16,15 +16,15 @@ Gem::Specification.new do |s|
   s.rubyforge_project         = "shortener"
   s.required_rubygems_version = "> 2.1.0"
 
-  s.add_dependency "voight_kampff", '>= 1.1.2'
+  s.add_dependency "voight_kampff", '~> 1.1', '>= 1.1.2'
 
-  s.add_development_dependency "rails", '>= 4'
-  s.add_development_dependency "sqlite3"
-  s.add_development_dependency "rspec-rails", '~> 3.6.0'
-  s.add_development_dependency "shoulda-matchers"
-  s.add_development_dependency "faker"
-  s.add_development_dependency "byebug"
-  s.add_development_dependency "appraisal"
+  s.add_development_dependency "rails", '~> 4'
+  s.add_development_dependency "sqlite3", '~> 1'
+  s.add_development_dependency "rspec-rails", '~> 3.6', '>= 3.6.0'
+  s.add_development_dependency "shoulda-matchers", '~> 3.1'
+  s.add_development_dependency "faker", "~> 1.8"
+  s.add_development_dependency "byebug", "~> 10.0"
+  s.add_development_dependency "appraisal", "~> 2.2"
 
   s.executables = `git ls-files`.split("\n").map{|f| f =~ /^bin\/(.*)/ ? $1 : nil}.compact
   s.require_path = 'lib'
