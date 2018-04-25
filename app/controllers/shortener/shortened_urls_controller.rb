@@ -1,4 +1,7 @@
-class Shortener::ShortenedUrlsController < ActionController::Base
+class Shortener::ShortenedUrlsController < ActionController::Metal
+  include ActionController::StrongParameters
+  include ActionController::Redirecting
+  include ActionController::Instrumentation
   include Shortener
 
   def show
