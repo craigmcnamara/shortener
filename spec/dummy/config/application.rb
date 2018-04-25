@@ -38,5 +38,9 @@ module Dummy
     config.filter_parameters += [:password]
 
     config.action_mailer.default_url_options = { host: "mbln.jp" }
+
+    if config.active_record.sqlite3.respond_to?(:represent_boolean_as_integer=)
+      config.active_record.sqlite3.represent_boolean_as_integer = true
+    end
   end
 end
