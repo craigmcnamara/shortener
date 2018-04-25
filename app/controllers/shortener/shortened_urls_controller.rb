@@ -2,6 +2,7 @@ class Shortener::ShortenedUrlsController < ActionController::Metal
   include ActionController::StrongParameters
   include ActionController::Redirecting
   include ActionController::Instrumentation
+  include Rails.application.routes.url_helpers
   include Shortener
 
   def show
