@@ -54,13 +54,17 @@ migration:
     end
   end
 
+=== v0.6.1 to v0.7.0
+
+v0.7.0 drops support for Rails 3.x and supports Rails 4.2 to 5.2+
+
 === Some niceities of Shortener:
 
 * The controller does a 301 redirect, which is the recommended type of redirect for maintaining maximum google juice to the original URL;
 * A unique alphanumeric code of generated for each shortened link, this means that we can get more unique combinations than if we just used numbers;
 * The link records a count of how many times it has been “un-shortened”;
 * The link can be associated with a user, this allows for stats of the link usage for a particular user and other interesting things;
-* The controller spawns a new thread to record information to the database, allowing the redirect to happen as quickly as possible;
+* The controller uses ActionController::Metal so our action is fast and doesn't perform any more work than necessary;
 
 === Future improvements:
 
