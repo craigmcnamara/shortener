@@ -126,7 +126,7 @@ class Shortener::ShortenedUrl < ActiveRecord::Base
     begin
       self.unique_key = custom_key || self.class.unique_key_candidate
       self.custom_key = nil
-    end while self.class.exists?(unique_key: unique_key) && custom_key.blank?
+    end while self.class.exists?(unique_key: unique_key)
   end
 
   def self.unique_key_candidate
